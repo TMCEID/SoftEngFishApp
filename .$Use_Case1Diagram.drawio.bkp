@@ -1,0 +1,28 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16">
+  <diagram name="Page-1" id="aWUXcd9DG55_SVHLmrhw">
+    <mxGraphModel dx="1554" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="&lt;b&gt;Fisherman&lt;/b&gt;" id="ez_9y8IXUy5wVjMBMklD-1">
+          <mxCell style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+            <mxGeometry x="50" y="130" width="30" height="60" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="ez_9y8IXUy5wVjMBMklD-5" value="frame" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="40" width="990" height="490" as="geometry" />
+        </mxCell>
+        <object label="&lt;b&gt;Chef&lt;/b&gt;" id="ez_9y8IXUy5wVjMBMklD-7">
+          <mxCell style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+            <mxGeometry x="50" y="260" width="30" height="60" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;b&gt;Rest.&lt;br&gt;Customer&lt;/b&gt;" id="ez_9y8IXUy5wVjMBMklD-8">
+          <mxCell style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+            <mxGeometry x="50" y="420" width="30" height="60" as="geometry" />
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
