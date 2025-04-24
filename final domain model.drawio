@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.1.1 Chrome/132.0.6834.210 Electron/34.3.3 Safari/537.36" version="26.1.1">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0" version="26.2.14">
   <diagram name="Page-1" id="0783ab3e-0a74-02c8-0abd-f7b4e66b4bec">
-    <mxGraphModel dx="4380" dy="1788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2926" dy="672" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -408,6 +408,25 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-850" y="889.58" as="sourcePoint" />
             <mxPoint x="-800" y="889.58" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AvmRFNTRV2sXLUMyoS70-5" value="Trips" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1020" y="488.00000000000006" width="150" height="82" as="geometry">
+            <mxRectangle x="350" y="460" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AvmRFNTRV2sXLUMyoS70-6" value="" style="endArrow=none;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=3;rounded=0;entryX=0.332;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;" edge="1" parent="1" source="AvmRFNTRV2sXLUMyoS70-5" target="9kzETTMTDvsTJWJQEYAj-88">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-720" y="401.33000000000004" as="sourcePoint" />
+            <mxPoint x="-690" y="609.33" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-790" y="579.33" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AvmRFNTRV2sXLUMyoS70-7" value="Programms" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="AvmRFNTRV2sXLUMyoS70-6">
+          <mxGeometry x="0.0522" y="-5" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
