@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:138.0) Gecko/20100101 Firefox/138.0" version="26.3.0">
   <diagram name="Page-1" id="0783ab3e-0a74-02c8-0abd-f7b4e66b4bec">
-    <mxGraphModel dx="3050" dy="1120" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2352" dy="541" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -355,6 +355,9 @@
         </mxCell>
         <mxCell id="0oGXfinGUsQ3fprHd6LS-4" value="&lt;b&gt;&lt;u&gt;Πρόταση για προσθήκη κλάσης που να κάνε handle τα execptions&lt;/u&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="460" y="800" width="130" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="0oGXfinGUsQ3fprHd6LS-5" value="&lt;b&gt;&lt;u&gt;Πρόταση για προσθήκη Πληθηκότητας σε όλο το διάγραμμα για να είναι πιο κατανοητές οι ενέργιες που επιτελούνται!&lt;/u&gt;&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-490" y="280" width="410" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
