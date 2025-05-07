@@ -185,22 +185,6 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cK02aoGFD56z1Gf120GQ-175" value="Ingredients" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="450" y="1118" width="140" height="52" as="geometry">
-            <mxRectangle x="350" y="460" width="100" height="30" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="cK02aoGFD56z1Gf120GQ-178" value="" style="endArrow=none;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=3;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="cK02aoGFD56z1Gf120GQ-175" edge="1">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="845" y="996" as="sourcePoint" />
-            <mxPoint x="425" y="990" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="cK02aoGFD56z1Gf120GQ-180" value="Chooses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="cK02aoGFD56z1Gf120GQ-178" vertex="1" connectable="0">
-          <mxGeometry x="0.1414" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="cK02aoGFD56z1Gf120GQ-181" value="" style="endArrow=none;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=3;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="cK02aoGFD56z1Gf120GQ-183" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="280" y="1000" as="sourcePoint" />
@@ -366,8 +350,11 @@
             <mxPoint x="75" y="570" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0oGXfinGUsQ3fprHd6LS-2" value="Πρόταση:&lt;br&gt;να φύγει από εδώ η κλάση sorter ή να δούμε αν μπορεί να υλοποιηθεί έτσι!&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="0oGXfinGUsQ3fprHd6LS-2" value="&lt;b&gt;&lt;u&gt;Πρόταση:&lt;br&gt;να φύγει από εδώ η κλάση sorter ή να δούμε αν μπορεί να υλοποιηθεί έτσι!&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-1060" y="872" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="0oGXfinGUsQ3fprHd6LS-4" value="&lt;b&gt;&lt;u&gt;Πρόταση για προσθήκη κλάσης που να κάνε handle τα execptions&lt;/u&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="800" width="130" height="92" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
