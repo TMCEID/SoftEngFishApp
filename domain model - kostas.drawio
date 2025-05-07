@@ -59,13 +59,8 @@
             <mxRectangle x="580" y="461" width="70" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cK02aoGFD56z1Gf120GQ-125" value="Beginner fisherman" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="cK02aoGFD56z1Gf120GQ-125" value="Fishing expertice" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-550" y="900" width="150" height="40" as="geometry">
-            <mxRectangle x="580" y="461" width="70" height="30" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="cK02aoGFD56z1Gf120GQ-134" value="Expert Fisherman" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=20;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-330" y="900" width="150" height="40" as="geometry">
             <mxRectangle x="580" y="461" width="70" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -320,12 +315,6 @@
             <mxPoint x="-920" y="1118" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RsBH3FpBVpJ5FogJQQQI-6" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.46;entryY=0.05;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryPerimeter=0;" parent="1" source="cK02aoGFD56z1Gf120GQ-123" target="cK02aoGFD56z1Gf120GQ-134" edge="1">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="-310" y="807" as="sourcePoint" />
-            <mxPoint x="-850" y="1118" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="RsBH3FpBVpJ5FogJQQQI-8" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="cK02aoGFD56z1Gf120GQ-222" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="-1100" y="1211" as="sourcePoint" />
@@ -358,6 +347,15 @@
         </mxCell>
         <mxCell id="0oGXfinGUsQ3fprHd6LS-5" value="&lt;b&gt;&lt;u&gt;Πρόταση για προσθήκη Πληθηκότητας σε όλο το διάγραμμα για να είναι πιο κατανοητές οι ενέργιες που επιτελούνται!&lt;/u&gt;&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-490" y="280" width="410" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0oGXfinGUsQ3fprHd6LS-6" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.443;entryY=-0.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="cK02aoGFD56z1Gf120GQ-125" target="0oGXfinGUsQ3fprHd6LS-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-360" y="922" as="sourcePoint" />
+            <mxPoint x="-340" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0oGXfinGUsQ3fprHd6LS-7" value="Beginner fisherman//Expert Fisherman" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-425" y="990" width="140" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
