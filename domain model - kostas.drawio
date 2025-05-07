@@ -342,9 +342,6 @@
         <mxCell id="0oGXfinGUsQ3fprHd6LS-2" value="&lt;b&gt;&lt;u&gt;Πρόταση:&lt;br&gt;να φύγει από εδώ η κλάση sorter ή να δούμε αν μπορεί να υλοποιηθεί έτσι!&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-1060" y="872" width="110" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="0oGXfinGUsQ3fprHd6LS-4" value="&lt;b&gt;&lt;u&gt;Πρόταση για προσθήκη κλάσης που να κάνε handle τα execptions&lt;/u&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="460" y="800" width="130" height="92" as="geometry" />
-        </mxCell>
         <mxCell id="0oGXfinGUsQ3fprHd6LS-5" value="&lt;b&gt;&lt;u&gt;Πρόταση για προσθήκη Πληθηκότητας σε όλο το διάγραμμα για να είναι πιο κατανοητές οι ενέργιες που επιτελούνται!&lt;/u&gt;&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-490" y="280" width="410" height="60" as="geometry" />
         </mxCell>
