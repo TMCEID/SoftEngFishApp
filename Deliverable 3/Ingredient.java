@@ -29,18 +29,17 @@ public class Ingredient {
         this.quantity = quantity;
     }
 
-    public static List<Ingredient> getSampleIngredients() {
-        List<Ingredient> ingredients = new ArrayList<>();
-        ingredients.add(new Ingredient(1, "Tzipoura", 50));
-        ingredients.add(new Ingredient(2, "Lavraki", 40));
-        ingredients.add(new Ingredient(3, "Sargos", 35));
-        ingredients.add(new Ingredient(4, "Fagri", 30));
-        ingredients.add(new Ingredient(5, "Octopus", 25));
-        ingredients.add(new Ingredient(6, "Mussels", 60));
-        ingredients.add(new Ingredient(7, "Shrimp", 45));
-        ingredients.add(new Ingredient(8, "Squid", 30));
-        ingredients.add(new Ingredient(9, "Sea Bass", 20));
-        ingredients.add(new Ingredient(10, "Red Mullet", 25));
-        return ingredients;
-    }
+   public static List<Ingredient> getSampleIngredients() {
+    List<Ingredient> ingredients = new ArrayList<>();
+    ingredients.add(new Ingredient(1, "Anchovy", 50));
+    ingredients.add(new Ingredient(2, "Carp", 40));
+    ingredients.add(new Ingredient(3, "Bass", 35));
+    ingredients.add(new Ingredient(4, "Shrimp", 30));
+    ingredients.add(new Ingredient(5, "Octopus", 25));
+    ingredients.add(new Ingredient(6, "Mussels", 60));
+    ingredients.add(new Ingredient(7, "Squid", 45));
+    ingredients.add(new Ingredient(8, "Sea Bass", 30));
+    ingredients.add(new Ingredient(9, "Red Mullet", 20));
+    return ingredients;
+}
 }
