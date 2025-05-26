@@ -32,24 +32,24 @@ public class Producer {
         // Create producers with different subsets of ingredients
         return Arrays.asList(
             new Producer(1, "Alexis Pappas", Arrays.asList(
-                allIngredients.get(0), // Tzipoura
-                allIngredients.get(1), // Lavraki
-                allIngredients.get(2)  // Sargos
+                allIngredients.get(0), // Anchovy
+                allIngredients.get(1), // Carp
+                allIngredients.get(2)  // Bass
             )),
-            new Producer(2, "Maria Karpouzi", Arrays.asList(
-                allIngredients.get(3), // Fagri
+            new Producer(2, "Maria Ioannou", Arrays.asList(
+                allIngredients.get(3), // Shrimp
                 allIngredients.get(4), // Octopus
                 allIngredients.get(5)  // Mussels
             )),
-            new Producer(3, "Nikos Psaras", Arrays.asList(
-                allIngredients.get(6), // Shrimp
-                allIngredients.get(7), // Squid
-                allIngredients.get(8)  // Sea Bass
+            new Producer(3, "Nikos Fournakos", Arrays.asList(
+                allIngredients.get(6), // Squid
+                allIngredients.get(7), // Sea Bass
+                allIngredients.get(8)  // Red Mullet
             )),
-            new Producer(4, "Fisherman's Choice", Arrays.asList(
-                allIngredients.get(9), // Red Mullet
-                allIngredients.get(0), // Tzipoura
-                allIngredients.get(3)  // Fagri
+            new Producer(4, "Kostas Mpompis", Arrays.asList(
+                allIngredients.get(2), // Bass
+                allIngredients.get(0), // Anchovy
+                allIngredients.get(3)  // Shrimp
             ))
         );
     }
