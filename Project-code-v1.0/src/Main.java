@@ -17,6 +17,7 @@ public class Main extends javax.swing.JPanel {
     private final String LOG_FISH_PANEL = "confirmationPanel";
     private final String WEATHER_REPORT_PANEL = "weatherReportPanel";
     private final String FRIENDS_PANEL = "friendsPanel";
+    private final String EDIT_PROFILE_PANEL = "editProfilePanel";  // Added
 
     // Create panels for different sections
     private javax.swing.JPanel contentPanel;
@@ -26,6 +27,7 @@ public class Main extends javax.swing.JPanel {
     private LogFishPanel logFishPanel;
     private WeatherReportPanel weatherReportPanel;
     private FriendsPanel friendsPanel;
+    private EditProfilePanel editProfilePanel;  // Added
 
     /**
      * Creates new form Main
@@ -58,6 +60,8 @@ public class Main extends javax.swing.JPanel {
         // Create friends panel
         friendsPanel = new FriendsPanel(1);  // use any test user ID
 
+        // Create edit profile panel
+        editProfilePanel = new EditProfilePanel(cardLayout, contentPanel, this);
 
         // Add panels to the card layout
         contentPanel.add(introPanel, INTRO_PANEL);
@@ -66,6 +70,7 @@ public class Main extends javax.swing.JPanel {
         contentPanel.add(logFishPanel, LOG_FISH_PANEL);
         contentPanel.add(weatherReportPanel, WEATHER_REPORT_PANEL);
         contentPanel.add(friendsPanel, FRIENDS_PANEL);
+        contentPanel.add(editProfilePanel, EDIT_PROFILE_PANEL);  // Added
 
         // Set the main layout to show the content panel
         javax.swing.GroupLayout mainLayout = new javax.swing.GroupLayout(this);
@@ -147,4 +152,5 @@ public class Main extends javax.swing.JPanel {
     public String getLogFishPanel() { return LOG_FISH_PANEL; }
     public String getWeatherReportPanel() { return WEATHER_REPORT_PANEL; }
     public String getFriendsPanel() { return FRIENDS_PANEL; }
+    public String getEditProfilePanel() { return EDIT_PROFILE_PANEL; }  // Added
 }

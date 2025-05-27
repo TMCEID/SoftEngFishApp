@@ -16,6 +16,7 @@ public class MainAppPanel extends javax.swing.JPanel {
     private final String LOG_FISH_PANEL = "confirmationPanel";
     private final String WEATHER_REPORT_PANEL = "weatherReportPanel";
     private final String FRIENDS_PANEL = "friendsPanel";
+    private final String EDIT_PROFILE_PANEL = "editProfilePanel";  // Added
 
     // Components
     private javax.swing.JLabel jLabel3;
@@ -285,10 +286,15 @@ public class MainAppPanel extends javax.swing.JPanel {
     }
 
     /**
-     * Handle edit profile button click
+     * Handle edit profile button click - now navigates to EditProfilePanel
      */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO: Implement edit profile functionality
+        if (parentMain.getCurrentUser() == null) {
+            JOptionPane.showMessageDialog(this, "Please login first!");
+            return;
+        }
+        // Navigate to edit profile panel
+        cardLayout.show(contentPanel, EDIT_PROFILE_PANEL);
     }
 
     /**
