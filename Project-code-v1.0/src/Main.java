@@ -14,7 +14,7 @@ public class Main extends javax.swing.JPanel {
     private final String INTRO_PANEL = "introPanel";
     private final String MAIN_APP_PANEL = "mainAppPanel";
     private final String ORDER_INGREDIENTS_PANEL = "orderIngredientsPanel";
-    private final String LOG_FISH_PANEL = "confirmationPanel";
+    private final String LOG_FISH_PANEL = "logfishPanel";
     private final String WEATHER_REPORT_PANEL = "weatherReportPanel";
     private final String FRIENDS_PANEL = "friendsPanel";
 
