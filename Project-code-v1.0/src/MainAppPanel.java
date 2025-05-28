@@ -155,16 +155,10 @@ public class MainAppPanel extends javax.swing.JPanel {
         });
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (2).png")));
-        jButton6.setText("Recipes");
         jButton6.setText("Search recipes");
         jButton6.setBorder(null);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
         
 
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (3).png")));
