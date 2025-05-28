@@ -43,7 +43,7 @@ public class Main extends javax.swing.JPanel {
     /* sub-cards inside the friends feature */
     public static final String ADD_FRIENDS_PANEL       = "addFriendsPanel";
     public static final String VIEW_FRIENDS_PANEL      = "viewFriendsPanel";
-
+    public static final String EDIT_PROFILE_PANEL = "editProfilePanel";
     // Create panels for different sections
     private javax.swing.JPanel contentPanel;
     private IntroPanel introPanel;
@@ -54,6 +54,8 @@ public class Main extends javax.swing.JPanel {
     private BaitSearchPanel    baitSearchPanel;   // <--  NEW
 
     private FriendsPanel friendsPanel;
+
+    private EditProfilePanel editProfilePanel;
 
     /**
      * Creates new form Main
@@ -83,6 +85,10 @@ public class Main extends javax.swing.JPanel {
         logFishPanel = new LogFishPanel(cardLayout, contentPanel);
         weatherReportPanel = new WeatherReportPanel(cardLayout, contentPanel);
         baitSearchPanel    = new BaitSearchPanel   (cardLayout, contentPanel);
+
+
+        // Create edit profile panel
+        editProfilePanel = new EditProfilePanel(cardLayout, contentPanel, this);
 
         // === friends: two separate cards ===
         // 1) panel to ADD friends (search bar + button)
@@ -128,6 +134,7 @@ public class Main extends javax.swing.JPanel {
                 contentPanel.add(logFishPanel, LOG_FISH_PANEL);
                 contentPanel.add(weatherReportPanel, WEATHER_REPORT_PANEL);
                 contentPanel.add(baitSearchPanel   , BAIT_SEARCH_PANEL);
+                contentPanel.add(editProfilePanel, EDIT_PROFILE_PANEL);  // Added
 
         // Set the main layout to show the content panel
         javax.swing.GroupLayout mainLayout = new javax.swing.GroupLayout(this);
@@ -217,4 +224,7 @@ public class Main extends javax.swing.JPanel {
     public String getLogFishPanel() { return LOG_FISH_PANEL; }
     public String getWeatherReportPanel() { return WEATHER_REPORT_PANEL; }
     public String getFriendsPanel() { return FRIENDS_PANEL; }
+
+    public String getEditProfilePanel() { return EDIT_PROFILE_PANEL; }  // Added
+
 }
