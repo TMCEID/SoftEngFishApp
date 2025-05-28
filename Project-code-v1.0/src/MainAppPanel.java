@@ -11,14 +11,13 @@ public class MainAppPanel extends javax.swing.JPanel {
     private CardLayout cardLayout;
     private JPanel contentPanel;
     private Main parentMain;  // Reference to main for controllers and user access
-    private final String INTRO_PANEL = "introPanel";
-    private final String ORDER_INGREDIENTS_PANEL = "orderIngredientsPanel";
-    private final String LOG_FISH_PANEL = "confirmationPanel";
-    private final String WEATHER_REPORT_PANEL = "weatherReportPanel";
-    private final String FRIENDS_PANEL = "friendsPanel";
-    private final String EDIT_PROFILE_PANEL = "editProfilePanel";  // Added
-
-    private final String BAIT_SEARCH_PANEL = "baitSearchPanel";
+    /* use the public constants exposed by the shell Main */
+    private final String INTRO_PANEL             = Main.INTRO_PANEL;
+    private final String ORDER_INGREDIENTS_PANEL = Main.ORDER_INGREDIENTS_PANEL;
+    private final String LOG_FISH_PANEL          = Main.LOG_FISH_PANEL;
+    private final String WEATHER_REPORT_PANEL    = Main.WEATHER_REPORT_PANEL;
+    private final String BAIT_SEARCH_PANEL       = Main.BAIT_SEARCH_PANEL;
+    private final String VIEW_FRIENDS_PANEL      = Main.VIEW_FRIENDS_PANEL;
 
     // Components
     private javax.swing.JLabel jLabel3;
@@ -95,11 +94,7 @@ public class MainAppPanel extends javax.swing.JPanel {
         jButtonViewFriends.setBackground(new java.awt.Color(87, 3, 3));
         jButtonViewFriends.setForeground(new java.awt.Color(255, 255, 255));
         jButtonViewFriends.setText("View friends");
-        jButtonViewFriends.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonViewFriendsActionPerformed(evt);
-            }
-        });
+        jButtonViewFriends.addActionListener(this::jButtonViewFriendsActionPerformed);
 
         jButton4.setBackground(new java.awt.Color(87, 3, 3));
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
@@ -158,16 +153,9 @@ public class MainAppPanel extends javax.swing.JPanel {
         jButton8.setBorder(null);
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (4).png")));
-        jButton8.setText("Baits");
-        jButton8.setBorder(null);
-        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
+        /*  open the bait search screen */
+                jButton8.addActionListener(evt ->
+                          cardLayout.show(contentPanel, BAIT_SEARCH_PANEL));
 
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (5).png")));
         jButton9.setText("Recipe Maker");
@@ -298,15 +286,10 @@ public class MainAppPanel extends javax.swing.JPanel {
     }
 
     /**
-     * Handle edit profile button click - now navigates to EditProfilePanel
+     * Handle edit profile button click
      */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        if (parentMain.getCurrentUser() == null) {
-            JOptionPane.showMessageDialog(this, "Please login first!");
-            return;
-        }
-        // Navigate to edit profile panel
-        cardLayout.show(contentPanel, EDIT_PROFILE_PANEL);
+        // TODO: Implement edit profile functionality
     }
 
     /**
@@ -336,7 +319,11 @@ public class MainAppPanel extends javax.swing.JPanel {
             return;
         }
 
-        cardLayout.show(contentPanel, FRIENDS_PANEL);
+        // 1) Ask Main to reload its friendsModel
+        parentMain.refreshFriendsList();
+
+        // 2) Show the view-friends card
+        cardLayout.show(contentPanel, VIEW_FRIENDS_PANEL);
     }
 
     /**
@@ -353,8 +340,5 @@ public class MainAppPanel extends javax.swing.JPanel {
      */
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO: Implement rate food experience functionality
-    }
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {
-        cardLayout.show(contentPanel, BAIT_SEARCH_PANEL);
     }
 }

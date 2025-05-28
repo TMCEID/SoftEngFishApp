@@ -1,8 +1,27 @@
+
+
 import java.awt.CardLayout;
 
 import model.User;
+import java.awt.BorderLayout;
+import javax.swing.JButton;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import model.Friend;
+import javax.swing.DefaultListModel;
+import javax.swing.JLabel;
+import javax.swing.BorderFactory;
+import java.awt.Color;
+//import BaitSearchPanel;
+
 
 public class Main extends javax.swing.JPanel {
+
+    // — for the “view friends” card —
+    private javax.swing.DefaultListModel<model.User> friendsModel;
+    private javax.swing.JList<model.User>          friendsList;
+    private javax.swing.JButton                    backFromFriendsBtn;
 
     // Controllers from second main
     private final FriendsController friendsCtrl = new FriendsController();
@@ -11,15 +30,19 @@ public class Main extends javax.swing.JPanel {
 
     // All panels connected
     private CardLayout cardLayout;
-    private final String INTRO_PANEL = "introPanel";
-    private final String MAIN_APP_PANEL = "mainAppPanel";
-    private final String ORDER_INGREDIENTS_PANEL = "orderIngredientsPanel";
-    private final String LOG_FISH_PANEL = "confirmationPanel";
-    private final String WEATHER_REPORT_PANEL = "weatherReportPanel";
-    private final String FRIENDS_PANEL = "friendsPanel";
-    private final String EDIT_PROFILE_PANEL = "editProfilePanel";  // Added
+    /* ─── card IDs (made public so other panels can import) ─── */
+    public static final String INTRO_PANEL             = "introPanel";
+    public static final String MAIN_APP_PANEL          = "mainAppPanel";
+    public static final String ORDER_INGREDIENTS_PANEL = "orderIngredientsPanel";
+    public static final String LOG_FISH_PANEL          = "confirmationPanel";
+    public static final String WEATHER_REPORT_PANEL    = "weatherReportPanel";
+    /* new: bait search */
+    public static final String BAIT_SEARCH_PANEL       = "baitSearchPanel";
 
-    private final String BAIT_SEARCH_PANEL = "baitSearchPanel";
+    public static final String FRIENDS_PANEL           = "friendsPanel";
+    /* sub-cards inside the friends feature */
+    public static final String ADD_FRIENDS_PANEL       = "addFriendsPanel";
+    public static final String VIEW_FRIENDS_PANEL      = "viewFriendsPanel";
 
     // Create panels for different sections
     private javax.swing.JPanel contentPanel;
@@ -28,10 +51,9 @@ public class Main extends javax.swing.JPanel {
     private OrderIngredientsPanel orderIngredientsPanel;
     private LogFishPanel logFishPanel;
     private WeatherReportPanel weatherReportPanel;
-    private FriendsPanel friendsPanel;
-    private EditProfilePanel editProfilePanel;  // Added
+    private BaitSearchPanel    baitSearchPanel;   // <--  NEW
 
-    private BaitSearchPanel baitSearchPanel;
+    private FriendsPanel friendsPanel;
 
     /**
      * Creates new form Main
@@ -60,25 +82,52 @@ public class Main extends javax.swing.JPanel {
         orderIngredientsPanel = new OrderIngredientsPanel(cardLayout, contentPanel);
         logFishPanel = new LogFishPanel(cardLayout, contentPanel);
         weatherReportPanel = new WeatherReportPanel(cardLayout, contentPanel);
+        baitSearchPanel    = new BaitSearchPanel   (cardLayout, contentPanel);
 
-        // Create friends panel
-        friendsPanel = new FriendsPanel(1);  // use any test user ID
+        // === friends: two separate cards ===
+        // 1) panel to ADD friends (search bar + button)
+        friendsPanel = new FriendsPanel(1);
+        contentPanel.add(friendsPanel, ADD_FRIENDS_PANEL);
 
-        baitSearchPanel = new BaitSearchPanel(cardLayout, contentPanel);
+        // 2) panel to VIEW friends (list + back button)
+        friendsModel = new DefaultListModel<>();
+        friendsList = new JList<>(friendsModel);
+        // copy the same cell‐renderer from FriendsPanel so we see icon + phone
+        friendsList.setCellRenderer((lst, user, i, sel, foc) -> {
+            JPanel p = new JPanel(new BorderLayout());
+            p.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
+
+            JLabel icon = new JLabel(user.getAvatar());
+            JLabel name = new JLabel(user.getUsername() +
+                    "  (" + user.getPhone() + ")");
+            name.setFont(name.getFont().deriveFont(15f));
+
+            p.add(icon, BorderLayout.WEST);
+            p.add(name, BorderLayout.CENTER);
+            if (sel) p.setBackground(new Color(225, 230, 255));
+            return p;
+        });
+
+        backFromFriendsBtn = new JButton("← Back");
+        backFromFriendsBtn.addActionListener(e ->
+                cardLayout.show(contentPanel, MAIN_APP_PANEL)
+        );
+
+        JPanel viewFriendsPanel = new JPanel(new BorderLayout(5, 5));
+        viewFriendsPanel.add(backFromFriendsBtn, BorderLayout.NORTH);
+        viewFriendsPanel.add(new JScrollPane(friendsList), BorderLayout.CENTER);
+        contentPanel.add(viewFriendsPanel, VIEW_FRIENDS_PANEL);
 
 
-        // Create edit profile panel
-        editProfilePanel = new EditProfilePanel(cardLayout, contentPanel, this);
 
-        // Add panels to the card layout
-        contentPanel.add(introPanel, INTRO_PANEL);
-        contentPanel.add(mainAppPanel, MAIN_APP_PANEL);
-        contentPanel.add(orderIngredientsPanel, ORDER_INGREDIENTS_PANEL);
-        contentPanel.add(logFishPanel, LOG_FISH_PANEL);
-        contentPanel.add(weatherReportPanel, WEATHER_REPORT_PANEL);
-        contentPanel.add(friendsPanel, FRIENDS_PANEL);
-        contentPanel.add(editProfilePanel, EDIT_PROFILE_PANEL);  // Added
-        contentPanel.add(baitSearchPanel, BAIT_SEARCH_PANEL);
+
+                        // Add the rest of your panels
+                                contentPanel.add(introPanel, INTRO_PANEL);
+                contentPanel.add(mainAppPanel, MAIN_APP_PANEL);
+                contentPanel.add(orderIngredientsPanel, ORDER_INGREDIENTS_PANEL);
+                contentPanel.add(logFishPanel, LOG_FISH_PANEL);
+                contentPanel.add(weatherReportPanel, WEATHER_REPORT_PANEL);
+                contentPanel.add(baitSearchPanel   , BAIT_SEARCH_PANEL);
 
         // Set the main layout to show the content panel
         javax.swing.GroupLayout mainLayout = new javax.swing.GroupLayout(this);
@@ -94,6 +143,14 @@ public class Main extends javax.swing.JPanel {
 
         // Show the intro panel first
         cardLayout.show(contentPanel, INTRO_PANEL);
+    }
+    /* * Called by MainAppPanel to reload the view‐friends list before showing it */
+    public void refreshFriendsList () {
+        if (currentUser == null) return;
+        friendsModel.clear();
+        friendsCtrl
+                .getAll(currentUser.getUserId())
+                .forEach(friendsModel::addElement);
     }
 
     /**
@@ -153,17 +210,11 @@ public class Main extends javax.swing.JPanel {
         this.currentUser = user;
     }
 
-
-
     // Panel name constants for external access
-
-    public String getBaitSearchPanel() { return BAIT_SEARCH_PANEL; }
-
     public String getIntroPanel() { return INTRO_PANEL; }
     public String getMainAppPanel() { return MAIN_APP_PANEL; }
     public String getOrderIngredientsPanel() { return ORDER_INGREDIENTS_PANEL; }
     public String getLogFishPanel() { return LOG_FISH_PANEL; }
     public String getWeatherReportPanel() { return WEATHER_REPORT_PANEL; }
     public String getFriendsPanel() { return FRIENDS_PANEL; }
-    public String getEditProfilePanel() { return EDIT_PROFILE_PANEL; }  // Added
 }

@@ -1,7 +1,9 @@
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 import java.util.ArrayList;
+import model.Bait;
 
 class ResultPage extends JPanel {
     private List<Bait> displayedResults;

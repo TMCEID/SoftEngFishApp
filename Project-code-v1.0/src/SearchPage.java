@@ -1,7 +1,11 @@
+
+
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.*;
 import java.util.List;
+import model.Bait;
+
 class SearchPage extends JPanel {
     private String searchQuery;
     private BaitResults baitResults;
@@ -52,7 +56,7 @@ class SearchPage extends JPanel {
     }
 
     protected void showResults(List<Bait> results) {
-        // This would typically navigate to ResultPage or show results
+        //  navigate to ResultPage or show results
         StringBuilder sb = new StringBuilder("Search Results:\n");
         for (Bait bait : results) {
             sb.append(bait.toString()).append("\n");

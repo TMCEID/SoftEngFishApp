@@ -1,6 +1,9 @@
+
+
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import java.awt.*;
+import model.Bait;
 
 public class BaitSearchPanel extends javax.swing.JPanel {
 

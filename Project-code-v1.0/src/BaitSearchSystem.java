@@ -1,6 +1,10 @@
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
+import model.Bait;
+
 
 class BaitSearchSystem {
     public static void main(String[] args) {

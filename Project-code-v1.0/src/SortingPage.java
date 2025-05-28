@@ -1,6 +1,9 @@
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
+import model.Bait;
 
 class SortingPage extends JPanel {
     private String selectedFilter;
