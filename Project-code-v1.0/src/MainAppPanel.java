@@ -19,6 +19,8 @@ public class MainAppPanel extends javax.swing.JPanel {
     private final String BAIT_SEARCH_PANEL       = Main.BAIT_SEARCH_PANEL;
     private final String VIEW_FRIENDS_PANEL      = Main.VIEW_FRIENDS_PANEL;
     private final String EDIT_PROFILE_PANEL = "editProfilePanel";  // Added
+    //NEW
+    private final String RECIPE_SEARCH_PANEL     = Main.RECIPE_SEARCH_PANEL;
 
     // Components
     private javax.swing.JLabel jLabel3;
@@ -128,15 +130,12 @@ public class MainAppPanel extends javax.swing.JPanel {
         });
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (2).png")));
-        jButton6.setText("Recipes");
+        jButton6.setText("Search recipes");
         jButton6.setBorder(null);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
+        jButton6.addActionListener(e ->
+                cardLayout.show(contentPanel, RECIPE_SEARCH_PANEL));
 
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (3).png")));
         jButton7.setText("Order ingredients");
@@ -264,27 +263,6 @@ public class MainAppPanel extends javax.swing.JPanel {
         );
     }
 
-    /**
-     * Handle recipe search button click - includes food search functionality
-     */
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
-        String kw = JOptionPane.showInputDialog(this, "Search dish:");
-        if (kw == null || kw.isBlank()) return;
-
-        // best-rating first (works on dishes)
-        SortStrategy<Dish> bestRated = list -> list.stream()
-                .sorted((a, b) -> Float.compare(b.getRating(), a.getRating()))
-                .toList();
-
-        var recipes = parentMain.getFoodController().search(kw.trim(), bestRated);
-
-        JOptionPane.showMessageDialog(this,
-                recipes.isEmpty() ? "No match found"
-                        : recipes.stream()
-                        .map(Recipe::getText)
-                        .limit(5)
-                        .reduce("", (a,b)->a + "\n\n" + b));
-    }
 
     /**
      * Handle edit profile button click

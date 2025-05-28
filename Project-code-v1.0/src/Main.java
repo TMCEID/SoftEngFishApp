@@ -1,5 +1,3 @@
-
-
 import java.awt.CardLayout;
 
 import model.User;
@@ -13,6 +11,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JLabel;
 import javax.swing.BorderFactory;
 import java.awt.Color;
+import controller.FoodSearchController;
 //import BaitSearchPanel;
 
 
@@ -39,6 +38,9 @@ public class Main extends javax.swing.JPanel {
     /* new: bait search */
     public static final String BAIT_SEARCH_PANEL       = "baitSearchPanel";
 
+    //NEW
+    public static final String RECIPE_SEARCH_PANEL     = "recipeSearchPanel";
+
     public static final String FRIENDS_PANEL           = "friendsPanel";
     /* sub-cards inside the friends feature */
     public static final String ADD_FRIENDS_PANEL       = "addFriendsPanel";
@@ -54,6 +56,10 @@ public class Main extends javax.swing.JPanel {
     private BaitSearchPanel    baitSearchPanel;   // <--  NEW
 
     private FriendsPanel friendsPanel;
+
+    //NEW
+    private RecipeSearchPanel recipeSearchPanel;
+
 
     private EditProfilePanel editProfilePanel;
 
@@ -85,6 +91,9 @@ public class Main extends javax.swing.JPanel {
         logFishPanel = new LogFishPanel(cardLayout, contentPanel);
         weatherReportPanel = new WeatherReportPanel(cardLayout, contentPanel);
         baitSearchPanel    = new BaitSearchPanel   (cardLayout, contentPanel);
+        /* ----------  recipe search screen  ---------- */
+                recipeSearchPanel = new RecipeSearchPanel(cardLayout, contentPanel, this);
+                contentPanel.add(recipeSearchPanel, RECIPE_SEARCH_PANEL);
 
 
         // Create edit profile panel
@@ -135,6 +144,7 @@ public class Main extends javax.swing.JPanel {
                 contentPanel.add(weatherReportPanel, WEATHER_REPORT_PANEL);
                 contentPanel.add(baitSearchPanel   , BAIT_SEARCH_PANEL);
                 contentPanel.add(editProfilePanel, EDIT_PROFILE_PANEL);  // Added
+                contentPanel.add(recipeSearchPanel , RECIPE_SEARCH_PANEL);
 
         // Set the main layout to show the content panel
         javax.swing.GroupLayout mainLayout = new javax.swing.GroupLayout(this);
