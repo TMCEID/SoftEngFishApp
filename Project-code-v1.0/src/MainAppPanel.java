@@ -18,6 +18,8 @@ public class MainAppPanel extends javax.swing.JPanel {
     private final String FRIENDS_PANEL = "friendsPanel";
     private final String EDIT_PROFILE_PANEL = "editProfilePanel";  // Added
 
+    private final String BAIT_SEARCH_PANEL = "baitSearchPanel";
+
     // Components
     private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jButton2;
@@ -156,6 +158,16 @@ public class MainAppPanel extends javax.swing.JPanel {
         jButton8.setBorder(null);
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (4).png")));
+        jButton8.setText("Baits");
+        jButton8.setBorder(null);
+        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (5).png")));
         jButton9.setText("Recipe Maker");
@@ -341,5 +353,8 @@ public class MainAppPanel extends javax.swing.JPanel {
      */
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO: Implement rate food experience functionality
+    }
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {
+        cardLayout.show(contentPanel, BAIT_SEARCH_PANEL);
     }
 }
