@@ -1,5 +1,7 @@
 // src/controller/FoodSearchController.java
 
+package controller;
+
 import dao.DishDao;
 import dao.RecipeDao;
 import model.*;

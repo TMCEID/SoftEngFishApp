@@ -1,5 +1,6 @@
 package dao;
 
+import model.Dish;
 import model.Recipe;
 import java.sql.*;
 import java.util.ArrayList;
@@ -47,10 +48,11 @@ public class RecipeDao {
     // All recipes that belong to one dish
     public List<Recipe> findByDishId(int dishId) {
         String sql = """
-                     SELECT r.recipe_id, r.dish_id, r.text, d.rating
-                     FROM   recipe r
-                     JOIN   dish   d USING (dish_id)
-                     WHERE  r.dish_id = ?""";
+                      SELECT r.recipe_id, r.dish_id, r.text,
+                      d.name, d.category, d.price, d.rating
+                      FROM   recipe r
+                      JOIN   dish   d USING (dish_id)
+                      WHERE  r.dish_id = ?""";
 
         try (Connection conn = DB.get();
              PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -69,11 +71,18 @@ public class RecipeDao {
     private List<Recipe> mapMany(ResultSet rs) throws SQLException {
         List<Recipe> list = new ArrayList<>();
         while (rs.next()) {
-            list.add(new Recipe(
-                    rs.getInt   ("recipe_id"),
-                    rs.getInt   ("dish_id"),
-                    rs.getString("text"),
-                    rs.getFloat ("rating")));
+            Dish dish = new Dish(
+                                        rs.getInt   ("dish_id"),
+                                        rs.getString("name"),
+                                        rs.getString("category"),
+                                        (float) rs.getDouble("price"),
+                                        rs.getFloat ("rating"));
+
+                                list.add(new Recipe(
+                                                rs.getInt   ("recipe_id"),
+                                                dish.getDishId(),
+                                                rs.getString("text"),
+                                                dish));
         }
         return list;
     }

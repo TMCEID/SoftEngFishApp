@@ -3,6 +3,7 @@
 import model.Dish;
 import model.Recipe;
 import model.SortStrategy;
+import controller.FoodSearchController;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,11 +42,11 @@ public class RecipesPanel extends JPanel {
 
         SortStrategy<Dish> strat = switch (cboSort.getSelectedIndex()) {
             case 1  -> list -> list.stream().sorted(
-                            (a,b)->a.getName().compareToIgnoreCase(b.getName())).toList();
+                    (a,b)->a.getName().compareToIgnoreCase(b.getName())).toList();
             case 2  -> list -> list.stream().sorted(
-                            (a,b)->Float.compare(a.getPrice(), b.getPrice())).toList();
+                    (a,b)->Float.compare(a.getPrice(), b.getPrice())).toList();
             default -> list -> list.stream().sorted(
-                            (a,b)->Float.compare(b.getRating(), a.getRating())).toList();
+                    (a,b)->Float.compare(b.getRating(), a.getRating())).toList();
         };
 
         List<Recipe> out = ctrl.search(kw, strat);

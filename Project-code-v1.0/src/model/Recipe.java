@@ -1,21 +1,31 @@
 package model;
 
-public class Recipe {
-    private final int    recipeId;
-    private final int    dishId;
-    private final String text;
-    private final float  rating;   // rating of its parent dish
+import model.Dish;
 
-    public Recipe(int recipeId, int dishId, String text, float rating) {
-        this.recipeId = recipeId;
-        this.dishId   = dishId;
-        this.text     = text;
-        this.rating   = rating;
-    }
+        /**
+  * A recipe **knows its parent {@link Dish}** so the UI can show name/price/rating
+  * without a second DB round-trip.
+  */
+        public class Recipe {
+     private final int  recipeId;
+    private final int  dishId;
+    private final String text;
+
+            /* NEW — full Dish record (name, price, rating…) */
+            private final Dish dish;
+
+            public Recipe(int recipeId, int dishId, String text, Dish dish) {
+                this.recipeId = recipeId;
+                this.dishId   = dishId;
+                this.text     = text;
+                this.dish     = dish;
+            }
 
     //getters
     public int    getRecipeId() { return recipeId; }
     public int    getDishId()   { return dishId; }
     public String getText()     { return text; }
-    public float  getRating()   { return rating; }
+    /* Convenience delegates */
+    public Dish   getDish()     { return dish; }
+    public float  getRating()   { return dish.getRating(); }
 }

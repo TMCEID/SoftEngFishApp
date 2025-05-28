@@ -23,8 +23,14 @@ public class MainAppPanel extends javax.swing.JPanel {
     private final String WEATHER_REPORT_PANEL    = Main.WEATHER_REPORT_PANEL;
     private final String BAIT_SEARCH_PANEL       = Main.BAIT_SEARCH_PANEL;
     private final String VIEW_FRIENDS_PANEL      = Main.VIEW_FRIENDS_PANEL;
+<<<<<<< HEAD
     private final String EDIT_PROFILE_PANEL = "editProfilePanel";
     private final String RATING_PANEL = Main.RATING_PANEL; // Added
+=======
+    private final String EDIT_PROFILE_PANEL = "editProfilePanel";  // Added
+    //NEW
+    private final String RECIPE_SEARCH_PANEL     = Main.RECIPE_SEARCH_PANEL;
+>>>>>>> 7f04fd0be43b86b8239b485e44354acbe790dad7
 
     // Components
     private javax.swing.JLabel jLabel3;
@@ -150,6 +156,7 @@ public class MainAppPanel extends javax.swing.JPanel {
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (2).png")));
         jButton6.setText("Recipes");
+        jButton6.setText("Search recipes");
         jButton6.setBorder(null);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -158,6 +165,7 @@ public class MainAppPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
+        
 
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (3).png")));
         jButton7.setText("Order ingredients");
@@ -292,6 +300,7 @@ public class MainAppPanel extends javax.swing.JPanel {
                                 .addContainerGap(355, Short.MAX_VALUE))
         );
     }
+<<<<<<< HEAD
     /**
      * Update the profile display with current user information
      */
@@ -336,6 +345,9 @@ public class MainAppPanel extends javax.swing.JPanel {
                         .limit(5)
                         .reduce("", (a,b)->a + "\n\n" + b));
     }
+=======
+
+>>>>>>> 7f04fd0be43b86b8239b485e44354acbe790dad7
 
     /**
      * Handle edit profile button click
