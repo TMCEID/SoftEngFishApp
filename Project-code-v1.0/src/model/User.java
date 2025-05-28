@@ -3,9 +3,13 @@ package model;
 import javax.swing.*;
 
 public class User {
+
+    private String profileImagePath;
+    private String phone;
+    private String role = "Customer";
     private final int    userId;
-    private final String phone;
-    private final String username;
+
+    private  String username;
     //private ImageIcon avatar;
 
     private final char gender;                // 'M' or 'F'
@@ -18,6 +22,31 @@ public class User {
     }
 
     //getters
+
+    public String getProfileImagePath() {
+        return profileImagePath;
+    }
+
+    public void setProfileImagePath(String profileImagePath) {
+        this.profileImagePath = profileImagePath;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
     public char      getGender()   { return gender; }
     public String    getPhone()    { return phone;  }
     public String    getUsername() { return username; }

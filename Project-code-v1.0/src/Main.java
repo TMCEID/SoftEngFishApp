@@ -44,7 +44,13 @@ public class Main extends javax.swing.JPanel {
     public static final String ADD_FRIENDS_PANEL       = "addFriendsPanel";
     public static final String VIEW_FRIENDS_PANEL      = "viewFriendsPanel";
     public static final String EDIT_PROFILE_PANEL = "editProfilePanel";
+
+    public static final String RATING_PANEL = "ratingPanel";
+
+
     // Create panels for different sections
+
+    private RatingPanel ratingPanel;
     private javax.swing.JPanel contentPanel;
     private IntroPanel introPanel;
     private MainAppPanel mainAppPanel;
@@ -73,6 +79,8 @@ public class Main extends javax.swing.JPanel {
         cardLayout = new CardLayout();
         contentPanel = new javax.swing.JPanel();
         contentPanel.setLayout(cardLayout);
+
+        ratingPanel = new RatingPanel(cardLayout, contentPanel, this);
 
         // Create the intro panel (enhanced with login functionality)
         introPanel = new IntroPanel(cardLayout, contentPanel, this);
@@ -134,7 +142,8 @@ public class Main extends javax.swing.JPanel {
                 contentPanel.add(logFishPanel, LOG_FISH_PANEL);
                 contentPanel.add(weatherReportPanel, WEATHER_REPORT_PANEL);
                 contentPanel.add(baitSearchPanel   , BAIT_SEARCH_PANEL);
-                contentPanel.add(editProfilePanel, EDIT_PROFILE_PANEL);  // Added
+                contentPanel.add(editProfilePanel, EDIT_PROFILE_PANEL);
+            contentPanel.add(ratingPanel, RATING_PANEL); // Added
 
         // Set the main layout to show the content panel
         javax.swing.GroupLayout mainLayout = new javax.swing.GroupLayout(this);
@@ -213,9 +222,19 @@ public class Main extends javax.swing.JPanel {
         return currentUser;
     }
 
+    public String getRatingPanel() { return RATING_PANEL; }
+
+
     public void setCurrentUser(User user) {
         this.currentUser = user;
     }
+
+    public void updateUserProfileDisplay() {
+        if (mainAppPanel != null) {
+            mainAppPanel.updateProfileDisplay();
+        }
+    }
+
 
     // Panel name constants for external access
     public String getIntroPanel() { return INTRO_PANEL; }

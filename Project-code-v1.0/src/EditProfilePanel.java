@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import model.User;
 
 public class EditProfilePanel extends javax.swing.JPanel {
     private CardLayout cardLayout;
@@ -18,6 +19,9 @@ public class EditProfilePanel extends javax.swing.JPanel {
     private JLabel profilePicture;
     private Font defaultFont;
 
+    // Store the selected image path for saving
+    private String selectedImagePath;
+
     /**
      * Creates new EditProfilePanel
      * @param cardLayout The CardLayout manager
@@ -28,6 +32,7 @@ public class EditProfilePanel extends javax.swing.JPanel {
         this.cardLayout = cardLayout;
         this.contentPanel = contentPanel;
         this.parentMain = parentMain;
+        this.selectedImagePath = null;
         initComponents();
     }
 
@@ -162,6 +167,33 @@ public class EditProfilePanel extends javax.swing.JPanel {
         add(formPanel, BorderLayout.CENTER);
     }
 
+    /**
+     * Load current user data into the form when the panel is shown
+     */
+    public void loadCurrentUserData() {
+        User currentUser = parentMain.getCurrentUser();
+        if (currentUser != null) {
+            // Load username if available
+            if (currentUser.getUsername() != null && !currentUser.getUsername().isEmpty()) {
+                usernameField.setText(currentUser.getUsername());
+                usernameField.setForeground(Color.decode("#4A5568"));
+                ((StyledTextField) usernameField).setShowingPlaceholder(false);
+            }
+
+            // Load phone if available (assuming User has a getPhone method)
+            // if (currentUser.getPhone() != null && !currentUser.getPhone().isEmpty()) {
+            //     phoneField.setText(currentUser.getPhone());
+            //     phoneField.setForeground(Color.decode("#4A5568"));
+            //     ((StyledTextField) phoneField).setShowingPlaceholder(false);
+            // }
+
+            // Load profile image if available
+            if (currentUser.getProfileImagePath() != null) {
+                loadProfileImage(currentUser.getProfileImagePath());
+            }
+        }
+    }
+
     private void selectNewAvatar() {
         JFileChooser chooser = new JFileChooser();
         chooser.setDialogTitle("Choose a new avatar");
@@ -195,10 +227,8 @@ public class EditProfilePanel extends javax.swing.JPanel {
                     name.endsWith(".bmp")) {
 
                 try {
-                    ImageIcon icon = new ImageIcon(
-                            new ImageIcon(file.getAbsolutePath()).getImage().getScaledInstance(105, 105,
-                                    Image.SCALE_SMOOTH));
-                    profilePicture.setIcon(icon);
+                    selectedImagePath = file.getAbsolutePath();
+                    loadProfileImage(selectedImagePath);
                 } catch (Exception e) {
                     showToast("⚠︎ Error loading image file.", Color.decode("#DC2626"));
                 }
@@ -208,14 +238,27 @@ public class EditProfilePanel extends javax.swing.JPanel {
         }
     }
 
+    private void loadProfileImage(String imagePath) {
+        try {
+            ImageIcon icon = new ImageIcon(
+                    new ImageIcon(imagePath).getImage().getScaledInstance(105, 105, Image.SCALE_SMOOTH));
+            profilePicture.setIcon(icon);
+        } catch (Exception e) {
+            showToast("⚠︎ Error loading image file.", Color.decode("#DC2626"));
+        }
+    }
+
     private void saveChanges() {
         String username = usernameField.getText().trim();
         String phone = phoneField.getText().trim();
+        String selectedRole = roleComboBox.getSelectedItem().toString();
 
         if (username.equals("Username..."))
             username = "";
         if (phone.equals("+3069XXXXXXXX"))
             phone = "";
+        if (selectedRole.equals("Select..."))
+            selectedRole = "";
 
         if (!username.isEmpty()) {
             // Updated validation: no spaces, dots, or commas anywhere, minimum 3 characters
@@ -235,9 +278,33 @@ public class EditProfilePanel extends javax.swing.JPanel {
             }
         }
 
-        // Here you could update the current user's profile
+        // Update the current user's profile
         if (parentMain.getCurrentUser() != null) {
-            // Update user profile logic would go here
+            User currentUser = parentMain.getCurrentUser();
+
+            // Update username if provided
+            if (!username.isEmpty()) {
+                currentUser.setUsername(username);
+            }
+
+            // Update phone if provided (assuming User has setPhone method)
+            // if (!phone.isEmpty()) {
+            //     currentUser.setPhone(phone);
+            // }
+
+             //Update role if provided (assuming User has setRole method)
+             if (!selectedRole.isEmpty()) {
+                 currentUser.setRole(selectedRole);
+             }
+
+            // Update profile image if selected
+            if (selectedImagePath != null) {
+                currentUser.setProfileImagePath(selectedImagePath);
+            }
+
+            // Notify other panels to update their display
+            parentMain.updateUserProfileDisplay();
+
             showToast("✅ Profile updated!", Color.decode("#059669"));
         } else {
             showToast("⚠︎ Please login first!", Color.decode("#DC2626"));
@@ -352,6 +419,10 @@ public class EditProfilePanel extends javax.swing.JPanel {
                     }
                 }
             });
+        }
+
+        public void setShowingPlaceholder(boolean showing) {
+            this.showingPlaceholder = showing;
         }
 
         @Override

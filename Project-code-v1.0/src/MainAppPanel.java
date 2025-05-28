@@ -5,6 +5,11 @@ import java.awt.Component;
 import model.Recipe;
 import model.Dish;
 import model.SortStrategy;
+import model.User;
+import javax.swing.ImageIcon;
+import java.awt.Image;
+import javax.swing.JLabel;
+
 
 public class MainAppPanel extends javax.swing.JPanel {
 
@@ -18,7 +23,8 @@ public class MainAppPanel extends javax.swing.JPanel {
     private final String WEATHER_REPORT_PANEL    = Main.WEATHER_REPORT_PANEL;
     private final String BAIT_SEARCH_PANEL       = Main.BAIT_SEARCH_PANEL;
     private final String VIEW_FRIENDS_PANEL      = Main.VIEW_FRIENDS_PANEL;
-    private final String EDIT_PROFILE_PANEL = "editProfilePanel";  // Added
+    private final String EDIT_PROFILE_PANEL = "editProfilePanel";
+    private final String RATING_PANEL = Main.RATING_PANEL; // Added
 
     // Components
     private javax.swing.JLabel jLabel3;
@@ -34,6 +40,9 @@ public class MainAppPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButtonViewFriends;
+    private javax.swing.JLabel usernameLabel;
+    private javax.swing.JLabel phoneLabel;
+    private javax.swing.JLabel roleLabel;
 
     /**
      * Creates new MainAppPanel
@@ -52,6 +61,9 @@ public class MainAppPanel extends javax.swing.JPanel {
      * Initialize the components
      */
     private void initComponents() {
+
+
+
         // Initialize components
         jLabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -66,9 +78,18 @@ public class MainAppPanel extends javax.swing.JPanel {
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jButtonViewFriends = new javax.swing.JButton();
-
         // Configure profile image
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("image.png")));
+
+
+        usernameLabel = new JLabel("Username: ");
+        usernameLabel.setFont(new java.awt.Font("SansSerif", java.awt.Font.BOLD, 14));
+
+        phoneLabel = new JLabel("Phone: ");
+        phoneLabel.setFont(new java.awt.Font("SansSerif", java.awt.Font.PLAIN, 13));
+
+        roleLabel = new JLabel("Role: ");
+        roleLabel.setFont(new java.awt.Font("SansSerif", java.awt.Font.ITALIC, 13));
 
         // Configure profile buttons
         jButton2.setBackground(new java.awt.Color(87, 3, 3));
@@ -198,53 +219,61 @@ public class MainAppPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(jLabel3)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addComponent(jButton2)
-                                                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(jButtonViewFriends, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(49, 49, 49)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                        .addComponent(jButton8)
-                                                        .addComponent(jButton5))
-                                                .addGap(27, 27, 27)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(jButton9)
-                                                                .addGap(18, 18, 18)
-                                                                .addComponent(jButton10))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(jButton6)
-                                                                .addGap(18, 18, 18)
-                                                                .addComponent(jButton7))))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(86, 86, 86)
-                                                .addComponent(jButton11)
-                                                .addGap(27, 27, 27)
-                                                .addComponent(jButton12)))
+                                .addContainerGap()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(usernameLabel)
+                                        .addComponent(phoneLabel)
+                                        .addComponent(roleLabel)
+                                        .addComponent(jButton2)
+                                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButtonViewFriends, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(69, 69, 69))
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(49, 49, 49)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jButton8)
+                                        .addComponent(jButton5))
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jButton9)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButton10))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jButton6)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButton7))))
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(86, 86, 86)
+                                .addComponent(jButton11)
+                                .addGap(27, 27, 27)
+                                .addComponent(jButton12))
         );
+
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(24, 24, 24)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel3)
                                         .addGroup(layout.createSequentialGroup()
+                                                .addComponent(usernameLabel)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(phoneLabel)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(roleLabel)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(jButton2)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jButton3)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jButtonViewFriends)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jButton4))
-                                        .addComponent(jLabel3))
-                                .addGap(115, 115, 115)
+                                                .addComponent(jButton4)))
+                                .addGap(30, 30, 30)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,7 +292,29 @@ public class MainAppPanel extends javax.swing.JPanel {
                                 .addContainerGap(355, Short.MAX_VALUE))
         );
     }
-
+    /**
+     * Update the profile display with current user information
+     */
+    public void updateProfileDisplay() {
+        User currentUser = parentMain.getCurrentUser();
+        if (currentUser != null && currentUser.getProfileImagePath() != null) {
+            try {
+                // Update the profile image (jLabel3) with the user's selected image
+                ImageIcon profileIcon = new ImageIcon(
+                        new ImageIcon(currentUser.getProfileImagePath())
+                                .getImage()
+                                .getScaledInstance(jLabel3.getWidth(), jLabel3.getHeight(), Image.SCALE_SMOOTH)
+                );
+                jLabel3.setIcon(profileIcon);
+            } catch (Exception e) {
+                // Keep the default image if there's an error loading the custom image
+                System.err.println("Error loading profile image: " + e.getMessage());
+            }
+            usernameLabel.setText("Username: " + currentUser.getUsername());
+            phoneLabel.setText("Phone: " + currentUser.getPhone());
+            roleLabel.setText("Role: " + (currentUser.getRole() != null ? currentUser.getRole() : "N/A"));
+        }
+    }
     /**
      * Handle recipe search button click - includes food search functionality
      */
@@ -294,8 +345,8 @@ public class MainAppPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please login first!");
             return;
         }
-        // Navigate to edit profile panel
-        cardLayout.show(contentPanel, EDIT_PROFILE_PANEL);
+        // Navigate to edit profile panel and load current user data
+        parentMain.showPanel(EDIT_PROFILE_PANEL);
     }
 
     /**
@@ -345,6 +396,10 @@ public class MainAppPanel extends javax.swing.JPanel {
      * Handle rate food experience button click
      */
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO: Implement rate food experience functionality
+        if (parentMain.getCurrentUser() == null) {
+            JOptionPane.showMessageDialog(this, "Please login first!");
+            return;
+        }
+        cardLayout.show(contentPanel, RATING_PANEL);
     }
 }
