@@ -153,13 +153,13 @@ public class Main extends javax.swing.JPanel {
                 contentPanel.add(logFishPanel, LOG_FISH_PANEL);
                 contentPanel.add(weatherReportPanel, WEATHER_REPORT_PANEL);
                 contentPanel.add(baitSearchPanel   , BAIT_SEARCH_PANEL);
-<<<<<<< HEAD
+
                 contentPanel.add(editProfilePanel, EDIT_PROFILE_PANEL);
             contentPanel.add(ratingPanel, RATING_PANEL); // Added
-=======
+
                 contentPanel.add(editProfilePanel, EDIT_PROFILE_PANEL);  // Added
                 contentPanel.add(recipeSearchPanel , RECIPE_SEARCH_PANEL);
->>>>>>> 7f04fd0be43b86b8239b485e44354acbe790dad7
+
 
         // Set the main layout to show the content panel
         javax.swing.GroupLayout mainLayout = new javax.swing.GroupLayout(this);
