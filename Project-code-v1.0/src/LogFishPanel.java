@@ -27,7 +27,7 @@ public class LogFishPanel extends JPanel {
         JPanel titlePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         titlePanel.setBackground(Color.WHITE);
 
-        JLabel titleLabel = new JLabel("Log Fish");
+        JLabel titleLabel = new JLabel("🐟 ⭐Fishing Log🐟 ⭐");
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setForeground(new Color(87, 3, 3));
         titlePanel.add(titleLabel);
@@ -48,7 +48,7 @@ public class LogFishPanel extends JPanel {
 
         // Date
         gbc.gridx = 0; gbc.gridy = 0;
-        formPanel.add(new JLabel("Ημερομηνία Καταγραφής:"), gbc);
+        formPanel.add(new JLabel("Catch date:"), gbc);
 
         JLabel dateLabel = new JLabel(todayDate);
         gbc.gridx = 1;
@@ -56,31 +56,32 @@ public class LogFishPanel extends JPanel {
 
         // Fish Name
         gbc.gridx = 0; gbc.gridy = 1;
-        formPanel.add(new JLabel("Επιλέξτε Ψάρι:"), gbc);
+        formPanel.add(new JLabel("Choose Fish:"), gbc);
 
-        fishNameCombo = new JComboBox<>(new String[]{"Tzipoura", "Lavraki", "Fagri", "Octopus", "Sargos"});
+        fishNameCombo = new JComboBox<>(new String[]{"Anchovy", "Carp", "Bass", "Shrimp",
+                "Octopus", "Mussels", "Squid", "Sea Bass", "Red Mullet"});
         fishNameCombo.setPreferredSize(new Dimension(200, 25));
-        fishNameCombo.setToolTipText("Επιλέξτε είδος ψαριού");
+        fishNameCombo.setToolTipText("Choose Type of Fish");
         gbc.gridx = 1;
         formPanel.add(fishNameCombo, gbc);
 
         // Quantity
         gbc.gridx = 0; gbc.gridy = 2;
-        formPanel.add(new JLabel("Ποσότητα:"), gbc);
+        formPanel.add(new JLabel("Qty:"), gbc);
 
         quantitySpinner = new JSpinner(new SpinnerNumberModel(1, 1, 1000, 1));
         quantitySpinner.setPreferredSize(new Dimension(80, 25));
-        quantitySpinner.setToolTipText("Αριθμός ψαριών");
+        quantitySpinner.setToolTipText("No. of Fish");
         gbc.gridx = 1;
         formPanel.add(quantitySpinner, gbc);
 
         // Weight
         gbc.gridx = 0; gbc.gridy = 3;
-        formPanel.add(new JLabel("Μέσο Βάρος (kg):"), gbc);
+        formPanel.add(new JLabel("Avg Weight (kg):"), gbc);
 
         weightSpinner = new JSpinner(new SpinnerNumberModel(1.0, 0.1, 100.0, 0.1));
         weightSpinner.setPreferredSize(new Dimension(80, 25));
-        weightSpinner.setToolTipText("Βάρος κάθε ψαριού");
+        weightSpinner.setToolTipText("Weight of Fish");
         gbc.gridx = 1;
         formPanel.add(weightSpinner, gbc);
 
@@ -90,17 +91,17 @@ public class LogFishPanel extends JPanel {
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
         buttonPanel.setBackground(Color.WHITE);
 
-        JButton logButton = new JButton("Finish Logging");
+        JButton logButton = new JButton("🐟Finish Logging🐟");
         logButton.setBackground(Color.decode("#800020"));
         logButton.setForeground(Color.WHITE);
-        logButton.setToolTipText("Καταγραφή ψαριάς");
+        logButton.setToolTipText("Finish logging");
         logButton.addActionListener(e -> handleLogging(todayDate));
         buttonPanel.add(logButton);
 
         JButton backButton = new JButton("Back to Home");
         backButton.setBackground(Color.decode("#800020"));
         backButton.setForeground(Color.WHITE);
-        backButton.setToolTipText("Επιστροφή στην αρχική σελίδα");
+        backButton.setToolTipText("Return to Home");
         backButton.addActionListener(e -> cardLayout.show(contentPanel, "mainAppPanel"));
         buttonPanel.add(backButton);
 
@@ -110,7 +111,7 @@ public class LogFishPanel extends JPanel {
 
     private void handleLogging(String date) {
         String fish = (String) fishNameCombo.getSelectedItem();
-        if (fish == null) fish = "Άγνωστο";
+        if (fish == null) fish = "Unknown";
 
         int quantity = (Integer) quantitySpinner.getValue();
         double weight = (Double) weightSpinner.getValue();
@@ -118,18 +119,17 @@ public class LogFishPanel extends JPanel {
 
         if (totalWeight > 50.0) {
             JOptionPane.showMessageDialog(this,
-                    "Παράνομη ψαριά! Το βάρος υπερβαίνει το επιτρεπόμενο όριο (50kg).",
-                    "Σφάλμα",
+                    "ILLEGAL CATCH! Weight exceeds 50kg limit!",
+                    "ERROR",
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         String summary = String.format("""
-            Ημερομηνία: %s
-            Ψάρι: %s
-            Ποσότητα: %d
-            Μέσο Βάρος: %.2f kg
-            Συνολικό Βάρος: %.2f kg
+                Date: %s
+                Fish: %s
+                Quantity: %d
+                Net Weight: %.2f kg
             -----------------------------
             """, date, fish, quantity, weight, totalWeight);
 
@@ -148,7 +148,7 @@ public class LogFishPanel extends JPanel {
         // Show success message
         JOptionPane.showMessageDialog(this,
                 summary,
-                "Καταγραφή Επιτυχής",
+                "Success!!!",
                 JOptionPane.INFORMATION_MESSAGE);
 
         cardLayout.show(contentPanel, "mainAppPanel");
