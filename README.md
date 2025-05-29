@@ -35,6 +35,67 @@
 ## 📄 Documentation
 Detailed app functionalities and use-case flows are available in our Project Description
 
+## 🫂 Team Members 
+@ponawpsuxika : Τσάλα Ζαφειρία (Ζεφ) - 3ο έτος 
+@FoolishKg : Γκύλλης Κων/νος (Κώστας) - 3ο έτος 
+@TMCEID : Μήλιος Θεόδωρος (Τεο) - 3ο έτος
+@lamproskouts : Κουτσαβίτης Λάμπρος - 3ο έτος
+@srxr-git : Σύρρος Χρήστος - 9ο έτος
 
+---
+
+## 👥 Team Collaboration & Project Management
+
+- Effectively distributed responsibilities based on skillsets (design, frontend, backend, documentation).
+- Used collaboration tools (GitHub, Discord) to track progress and communicate asynchronously.
+- Conducted regular team meetings to update progress, set goals, and resolve blockers.
+
+---
+
+## 🧱 Software Engineering & Design
+
+- **Robustness Diagrams**  
+  Created robustness diagrams to model the interactions between UI, logic, and data, ensuring consistent system behavior.
+
+- **UML Sequence Diagrams**  
+  Designed sequence diagrams to visualize object interactions, helping us plan the logic for key use cases like:
+  - Ordering seafood
+  - Logging a fishing session
+  - Rating dishes
+
+- **Use Case Analysis**  
+  Defined clear use cases for each user role (Fisherman, Chef, Food Lover) to guide development.
+
+---
+
+## 💻 Development
+
+- **Coding Skills**  
+  Implemented functionality using Java and SQL (in IDE's like NetBeans, Intellij IDEA)
+  
+- **Role-Based Access & Functionality**  
+  Developed functionality tailored to each user role, ensuring modular and reusable code.
+
+---
+
+## 🧪 Testing
+
+- Performed **unit testing** and **manual testing** for key features.
+- Identified and fixed bugs through structured testing scenarios.
+- Collected user feedback (from peers or demo sessions) to improve usability.
+
+---
+
+## 📝 Documentation & Technical Reporting
+
+- Wrote clear and structured documentation:
+  - General architecture
+  - Functionality per user role
+  - Development process
+  - Diagrams (robustness, sequence, use cases, class diagram etc.)
+
+---
+## 🎱 How To Run App
+TBA
 ---
 
