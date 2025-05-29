@@ -35,13 +35,14 @@
 ## 📄 Documentation
 Detailed app functionalities and use-case flows are available in our Project Description
 
+---
+
 ## 🫂 Team Members 
-## 🫂 Team Members 
-[@ponawpsuxika](https://github.com/ponawpsuxika) : Τσάλα Ζαφειρία (Ζεφ) - 3ο έτος  
-[@FoolishKg](https://github.com/FoolishKg) : Γκύλλης Κων/νος (Κώστας) - 3ο έτος  
-[@TMCEID](https://github.com/TMCEID) : Μήλιος Θεόδωρος (Τεο) - 3ο έτος  
-[@lamproskouts](https://github.com/lamproskouts) : Κουτσαβίτης Λάμπρος - 3ο έτος  
-[@srxr-git](https://github.com/srxr-git) : Σύρρος Χρήστος - 9ο έτος
+- [@ponawpsuxika](https://github.com/ponawpsuxika) : Τσάλα Ζαφειρία (Ζεφ) - 3ο έτος  
+- [@FoolishKg](https://github.com/FoolishKg) : Γκύλλης Κων/νος (Κώστας) - 3ο έτος  
+- [@TMCEID](https://github.com/TMCEID) : Μήλιος Θεόδωρος (Τεο) - 3ο έτος  
+- [@lamproskouts](https://github.com/lamproskouts) : Κουτσαβίτης Λάμπρος - 3ο έτος  
+- [@srxr-git](https://github.com/srxr-git) : Σύρρος Χρήστος - 9ο έτος
 
 ---
 
