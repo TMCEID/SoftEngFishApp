@@ -734,7 +734,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="qBL_rV48eNaPXq8XejGZ-32" value="Enter Credentials" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="610" y="-750" width="110" height="60" as="geometry" />
+          <mxGeometry x="690" y="-770" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="qBL_rV48eNaPXq8XejGZ-33" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;" edge="1" parent="1" source="qBL_rV48eNaPXq8XejGZ-2" target="qBL_rV48eNaPXq8XejGZ-32">
           <mxGeometry width="160" relative="1" as="geometry">
