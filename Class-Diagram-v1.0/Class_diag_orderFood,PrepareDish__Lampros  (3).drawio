@@ -1,0 +1,156 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.15 Chrome/134.0.6998.205 Electron/35.2.1 Safari/537.36" version="26.2.15">
+  <diagram name="Σελίδα-1" id="VbvC_hYN4VeRJr1SmG8f">
+    <mxGraphModel dx="1615" dy="2194" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="A1f5qZkB9SCuruUHtYql-1" value="OrderFoodGui" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="-160" width="160" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-2" value="- cardLayout: CardLayout&lt;div&gt;- contentPanel: JPanel&lt;/div&gt;&lt;div&gt;- chartPanel: JPanel&lt;/div&gt;&lt;div&gt;- selectedDishes: Map&lt;/div&gt;&lt;div&gt;- dishesPanel: JPanel&amp;nbsp;&lt;/div&gt;&lt;div&gt;- quantitySpinner: JSpinner&lt;/div&gt;&lt;div&gt;- CHART_FILE_PATH: String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="A1f5qZkB9SCuruUHtYql-1" vertex="1">
+          <mxGeometry y="26" width="160" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="A1f5qZkB9SCuruUHtYql-1" vertex="1">
+          <mxGeometry y="150" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-4" value="+ OrderFoodGui(cardLayout, contentPanel)&lt;div&gt;- initComponents(): void&lt;/div&gt;&lt;div&gt;- createStyledButton(text: String, isPrimary: boolean): JButton&amp;nbsp;&lt;/div&gt;&lt;div&gt;- saveToChart(): void&lt;/div&gt;&lt;div&gt;- createChartPanel(): void&lt;/div&gt;&lt;div&gt;- showChartPanel(): void&lt;/div&gt;&lt;div&gt;- findTextArea(container: Container): JTextArea&lt;/div&gt;&lt;div&gt;- clearChartFile(): void&lt;/div&gt;&lt;div&gt;- cancelOrder(): void&lt;/div&gt;&lt;div&gt;- resetForm(): void&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="A1f5qZkB9SCuruUHtYql-1" vertex="1">
+          <mxGeometry y="158" width="160" height="232" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-53" value="Dish" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-750" y="110" width="160" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-54" value="&lt;div&gt;- name: String&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;- -ingredients: Ingredient[]&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="A1f5qZkB9SCuruUHtYql-53" vertex="1">
+          <mxGeometry y="26" width="160" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-55" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="A1f5qZkB9SCuruUHtYql-53" vertex="1">
+          <mxGeometry y="130" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-56" value="&lt;div&gt;+ Dish(name: String, ingredients: Ingredient[])&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;+ getName(): String&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/div&gt;&lt;div&gt;+ getIngredients(): Ingredient[]&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;+ canMakeDish(): boolean&amp;nbsp; &lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ makeDish(): boolean&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ getDishes(): Dish[]&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ toString(): String&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="A1f5qZkB9SCuruUHtYql-53" vertex="1">
+          <mxGeometry y="138" width="160" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-65" value="Ingredient" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-493" y="358" width="160" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-66" value="-Name:String&lt;div&gt;-quantity: int&lt;/div&gt;&lt;div&gt;- stock :list&amp;lt;ingredient&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="A1f5qZkB9SCuruUHtYql-65" vertex="1">
+          <mxGeometry y="26" width="160" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-67" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="A1f5qZkB9SCuruUHtYql-65" vertex="1">
+          <mxGeometry y="90" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-68" value="+loadStockFromFile(String fname): void&lt;div&gt;+getStock(); list&amp;lt;Ingredient&amp;gt;&lt;/div&gt;&lt;div&gt;+saveStockToFile(String fname): void&lt;/div&gt;&lt;div&gt;+getName():String&lt;/div&gt;&lt;div&gt;+setQuantity(): void&lt;/div&gt;&lt;div&gt;+getQuantity(int quantity): int&lt;/div&gt;&lt;div&gt;+toString(): String&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="A1f5qZkB9SCuruUHtYql-65" vertex="1">
+          <mxGeometry y="98" width="160" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="A1f5qZkB9SCuruUHtYql-74" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.441;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="A1f5qZkB9SCuruUHtYql-53" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-530" y="-135" as="sourcePoint" />
+            <mxPoint x="-333" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-26" value="Manages" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="A1f5qZkB9SCuruUHtYql-74">
+          <mxGeometry x="0.1533" y="1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hzQFkaZlohZEBe7GLANC-1" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0;entryY=0.817;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.563;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="A1f5qZkB9SCuruUHtYql-2" edge="1" source="vCqL-caqa9P076l2Jxiq-17">
+          <mxGeometry x="0.0208" y="11" width="160" relative="1" as="geometry">
+            <mxPoint x="80" y="-280" as="sourcePoint" />
+            <mxPoint x="190" y="-145.43" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="80" y="-80" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hzQFkaZlohZEBe7GLANC-17" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=1.036;entryY=0.08;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="vCqL-caqa9P076l2Jxiq-6" edge="1">
+          <mxGeometry x="0.0208" y="11" width="160" relative="1" as="geometry">
+            <mxPoint x="40" y="-336" as="sourcePoint" />
+            <mxPoint x="-370.79999999999995" y="-180.43999999999983" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="40" y="-160" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-1" value="ItemLoader" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="265" width="140" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-3" value="+loadItemsFromFile( filename: String): list&amp;lt;Ingredient&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="vCqL-caqa9P076l2Jxiq-1">
+          <mxGeometry y="29" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-5" value="PrepareDishGui" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-530" y="-200" width="140" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-6" value="+ launch(): void&lt;div&gt;(extends BasicButtonUI)&lt;/div&gt;&lt;div&gt;+ paint(g: Graphics, c: JComponent): void&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="vCqL-caqa9P076l2Jxiq-5">
+          <mxGeometry y="30" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-7" value="Main" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="-1020" width="330" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-8" value="&lt;pre&gt;- friendsModel: DefaultListModel&amp;lt;User&amp;gt; &lt;br/&gt;- friendsList: JList&amp;lt;User&amp;gt;   &lt;br/&gt;- backFromFriendsBtn: JButton&lt;br/&gt;- friendsCtrl: FriendsController &lt;br/&gt;- currentUser: User          &lt;br/&gt;- foodCtrl: FoodSearchController &lt;br/&gt;- cardLayout: CardLayout     &lt;br/&gt;- contentPanel: JPanel       &lt;br/&gt;- prepareDishPanel: PrepareDishPanel &lt;br/&gt;- ratingPanel: RatingPanel   &lt;br/&gt;- introPanel: IntroPanel     &lt;br/&gt;- mainAppPanel: MainAppPanel &lt;br/&gt;- orderIngredientsPanel: OrderIngredientsPanel &lt;br/&gt;- logFishPanel: LogFishPanel &lt;br/&gt;- weatherReportPanel: WeatherReportPanel &lt;br/&gt;- baitSearchPanel: BaitSearchPanel &lt;br/&gt;- friendsPanel: FriendsPanel &lt;br/&gt;- recipeSearchPanel: RecipeSearchPanel &lt;br/&gt;- editProfilePanel: EditProfilePanel &lt;br/&gt;- orderFoodPanel: OrderFoodGui &lt;/pre&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vCqL-caqa9P076l2Jxiq-7">
+          <mxGeometry y="26" width="330" height="324" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-9" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="vCqL-caqa9P076l2Jxiq-7">
+          <mxGeometry y="350" width="330" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-10" value="&lt;pre&gt;+ Main(): Constructor        &lt;br/&gt;+ refreshFriendsList(): void &lt;br/&gt;+ addPanel(JPanel, String): void &lt;br/&gt;+ showPanel(String): void    &lt;br/&gt;+ getCardLayout(): CardLayout&lt;br/&gt;+ getContentPanel(): JPanel  &lt;br/&gt;+ getFriendsController(): FriendsController &lt;br/&gt;+ getFoodController(): FoodSearchController &lt;br/&gt;+ getCurrentUser(): User     &lt;br/&gt;+ getRatingPanel(): String   &lt;br/&gt;+ setCurrentUser(User): void &lt;br/&gt;+ updateUserProfileDisplay(): void &lt;br/&gt;+ getPrepareDishPanel(): String &lt;br/&gt;+ getOrderFoodPanel(): String&lt;br/&gt;+ getIntroPanel(): String    &lt;br/&gt;+ getMainAppPanel(): String  &lt;br/&gt;+ getOrderIngredientsPanel(): String &lt;br/&gt;+ getLogFishPanel(): String  &lt;br/&gt;+ getWeatherReportPanel(): String &lt;br/&gt;+ getFriendsPanel(): String  &lt;br/&gt;+ getEditProfilePanel(): String &lt;br/&gt;+ getRecipeSearchPanel(): String&lt;/pre&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vCqL-caqa9P076l2Jxiq-7">
+          <mxGeometry y="358" width="330" height="362" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-11" value="MainAppPanel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-210" y="-1060" width="390" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-12" value="&lt;pre&gt;- cardLayout: CardLayout     &lt;br/&gt;- contentPanel: JPanel       &lt;br/&gt;- parentMain: Main           &lt;br/&gt;- INTRO_PANEL: String        &lt;br/&gt;- ORDER_INGREDIENTS_PANEL: String &lt;br/&gt;- LOG_FISH_PANEL: String     &lt;br/&gt;- WEATHER_REPORT_PANEL: String &lt;br/&gt;- BAIT_SEARCH_PANEL: String  &lt;br/&gt;- VIEW_FRIENDS_PANEL: String &lt;br/&gt;- EDIT_PROFILE_PANEL: String &lt;br/&gt;- RATING_PANEL: String       &lt;br/&gt;- ORDER_FOOD_PANEL: String   &lt;br/&gt;- RECIPE_SEARCH_PANEL: String &lt;br/&gt;- PREPARE_DISH_PANEL: String &lt;br/&gt;- jLabel3: JLabel            &lt;br/&gt;- jButton2–12: JButton       &lt;br/&gt;- jButtonViewFriends: JButton&lt;br/&gt;- usernameLabel: JLabel      &lt;br/&gt;- phoneLabel: JLabel         &lt;br/&gt;- roleLabel: JLabel&lt;/pre&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vCqL-caqa9P076l2Jxiq-11">
+          <mxGeometry y="26" width="390" height="324" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-13" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="vCqL-caqa9P076l2Jxiq-11">
+          <mxGeometry y="350" width="390" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-14" value="&lt;pre&gt;+ MainAppPanel(CardLayout, JPanel, Main): Constructor &lt;br/&gt;+ updateProfileDisplay(): void &lt;/pre&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="vCqL-caqa9P076l2Jxiq-11">
+          <mxGeometry y="358" width="390" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-15" value="Rest Customer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="-370" width="160" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-17" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="vCqL-caqa9P076l2Jxiq-15">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-19" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=-0.003;entryY=0.842;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="vCqL-caqa9P076l2Jxiq-15" target="vCqL-caqa9P076l2Jxiq-10">
+          <mxGeometry x="0.0208" y="11" width="160" relative="1" as="geometry">
+            <mxPoint x="160" y="-440" as="sourcePoint" />
+            <mxPoint x="450" y="-137" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-20" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.001;exitY=0.29;exitDx=0;exitDy=0;entryX=0.464;entryY=1.012;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="vCqL-caqa9P076l2Jxiq-10" target="vCqL-caqa9P076l2Jxiq-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="264.22" y="-556.5140000000002" as="sourcePoint" />
+            <mxPoint x="-49.99999999999976" y="-583.9719999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-21" value="Shows" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vCqL-caqa9P076l2Jxiq-20">
+          <mxGeometry x="0.025" y="-6" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-24" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.44;exitY=1.021;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="A1f5qZkB9SCuruUHtYql-56" target="A1f5qZkB9SCuruUHtYql-68">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="-720" y="450.0759999999996" as="sourcePoint" />
+            <mxPoint x="-532.92" y="557.2419999999997" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-680" y="450" />
+              <mxPoint x="-580" y="450" />
+              <mxPoint x="-580" y="557" />
+              <mxPoint x="-493" y="557" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vCqL-caqa9P076l2Jxiq-25" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="A1f5qZkB9SCuruUHtYql-65" target="vCqL-caqa9P076l2Jxiq-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-500" y="240" as="sourcePoint" />
+            <mxPoint x="-340" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
