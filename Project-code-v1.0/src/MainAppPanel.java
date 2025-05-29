@@ -27,9 +27,10 @@ public class MainAppPanel extends javax.swing.JPanel {
     private final String EDIT_PROFILE_PANEL = "editProfilePanel";
     private final String RATING_PANEL = Main.RATING_PANEL; // Added
 
-    //private final String EDIT_PROFILE_PANEL = "editProfilePanel";  // Added
-    //NEW
+    private final String ORDER_FOOD_PANEL = Main.ORDER_FOOD_PANEL;
     private final String RECIPE_SEARCH_PANEL     = Main.RECIPE_SEARCH_PANEL;
+
+    private final String PREPARE_DISH_PANEL = Main.PREPARE_DISH_PANEL;
 
 
     // Components
@@ -188,6 +189,11 @@ public class MainAppPanel extends javax.swing.JPanel {
         jButton9.setBorder(null);
         jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton9.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cardLayout.show(contentPanel, PREPARE_DISH_PANEL);
+            }
+        });
 
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (6).png")));
         jButton10.setText("Log Fish");
@@ -216,6 +222,11 @@ public class MainAppPanel extends javax.swing.JPanel {
         jButton12.setBorder(null);
         jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton12.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cardLayout.show(contentPanel, ORDER_FOOD_PANEL);
+            }
+        });
 
         // Layout setup
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

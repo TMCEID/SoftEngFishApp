@@ -32,6 +32,7 @@ public class Main extends javax.swing.JPanel {
     // All panels connected
     private CardLayout cardLayout;
     /* ─── card IDs (made public so other panels can import) ─── */
+    public static final String PREPARE_DISH_PANEL = "prepareDishPanel";
     public static final String INTRO_PANEL             = "introPanel";
     public static final String MAIN_APP_PANEL          = "mainAppPanel";
     public static final String ORDER_INGREDIENTS_PANEL = "orderIngredientsPanel";
@@ -39,8 +40,9 @@ public class Main extends javax.swing.JPanel {
     public static final String WEATHER_REPORT_PANEL    = "weatherReportPanel";
     /* new: bait search */
     public static final String BAIT_SEARCH_PANEL       = "baitSearchPanel";
+   //new
+    public static final String ORDER_FOOD_PANEL = "orderFoodPanel";
 
-    //NEW
     public static final String RECIPE_SEARCH_PANEL     = "recipeSearchPanel";
 
     public static final String FRIENDS_PANEL           = "friendsPanel";
@@ -53,7 +55,7 @@ public class Main extends javax.swing.JPanel {
 
 
     // Create panels for different sections
-
+    private PrepareDishPanel prepareDishPanel;
     private RatingPanel ratingPanel;
     private javax.swing.JPanel contentPanel;
     private IntroPanel introPanel;
@@ -71,6 +73,8 @@ public class Main extends javax.swing.JPanel {
 
     private EditProfilePanel editProfilePanel;
 
+    private OrderFoodGui orderFoodPanel;
+
     /**
      * Creates new form Main
      */
@@ -83,10 +87,22 @@ public class Main extends javax.swing.JPanel {
      * Sets up the card layout for panel switching
      */
     private void setupCardLayout() {
+
+
         // Initialize card layout and content panel FIRST
         cardLayout = new CardLayout();
         contentPanel = new javax.swing.JPanel();
         contentPanel.setLayout(cardLayout);
+
+        Ingredient.loadStockFromFile("Ingredient_list.txt");
+
+
+        prepareDishPanel = new PrepareDishPanel (cardLayout, contentPanel);
+        contentPanel.add(prepareDishPanel, PREPARE_DISH_PANEL);
+
+
+        orderFoodPanel = new OrderFoodGui(cardLayout, contentPanel);
+        contentPanel.add(orderFoodPanel, ORDER_FOOD_PANEL);
 
         ratingPanel = new RatingPanel(cardLayout, contentPanel, this);
 
@@ -252,7 +268,10 @@ public class Main extends javax.swing.JPanel {
     }
 
 
-    // Panel name constants for external access
+    // Panel name getters
+    public String getPrepareDishPanel() { return PREPARE_DISH_PANEL; }
+    public String getOrderFoodPanel() { return ORDER_FOOD_PANEL; }
+
     public String getIntroPanel() { return INTRO_PANEL; }
     public String getMainAppPanel() { return MAIN_APP_PANEL; }
     public String getOrderIngredientsPanel() { return ORDER_INGREDIENTS_PANEL; }

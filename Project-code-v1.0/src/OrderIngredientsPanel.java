@@ -195,7 +195,7 @@ public class OrderIngredientsPanel extends JPanel {
                     selectedItems.put(checkBox.getText(), quantity);
                 }
             }
-            cardLayout.show(contentPanel, "MainAppPanel");
+            cardLayout.show(contentPanel, "mainAppPanel");
         }
 
         // Validation
@@ -277,7 +277,7 @@ public class OrderIngredientsPanel extends JPanel {
                         "Order Success",
                         JOptionPane.INFORMATION_MESSAGE);
                 resetForm();
-                cardLayout.show(contentPanel, "MainAppPanel");
+                cardLayout.show(contentPanel, "mainAppPanel");
             } else {
                 JOptionPane.showMessageDialog(this,
                         "Order was processed but there was an issue saving to file.\nPlease check if you have write permissions.",
@@ -398,7 +398,7 @@ public class OrderIngredientsPanel extends JPanel {
                     "Order cancelled successfully!",
                     "Order Cancelled",
                     JOptionPane.INFORMATION_MESSAGE);
-            cardLayout.show(contentPanel, "MainAppPanel");
+            cardLayout.show(contentPanel, "mainAppPanel");
         }
     }
 
