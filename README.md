@@ -104,6 +104,7 @@ TBA
 
 ## 🏹 Tools used 
 - Diagrams : draw.io , lucid
+- Mockups: Figma
 - Coding : Netbeans , SQL , Intellij IDEA
 - Reports : MS Word 2016, ilovepdf.com
 - Bibliography : [E-class](https://eclass.upatras.gr/modules/document/?course=CEID1030)
