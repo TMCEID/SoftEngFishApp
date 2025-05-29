@@ -138,7 +138,7 @@ public class MainAppPanel extends javax.swing.JPanel {
 
         // Configure feature buttons
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (1).png")));
-        jButton5.setText("WeatherReport");
+        jButton5.setText("Weather Reporting");
         jButton5.setBorder(null);
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -156,7 +156,7 @@ public class MainAppPanel extends javax.swing.JPanel {
         });
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (2).png")));
-        jButton6.setText("Search recipes");
+        jButton6.setText("Cookbook");
         jButton6.setBorder(null);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -165,7 +165,7 @@ public class MainAppPanel extends javax.swing.JPanel {
         
 
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (3).png")));
-        jButton7.setText("Order ingredients");
+        jButton7.setText("Order Ingredients");
         jButton7.setBorder(null);
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -196,7 +196,7 @@ public class MainAppPanel extends javax.swing.JPanel {
         });
 
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("image (6).png")));
-        jButton10.setText("Log Fish");
+        jButton10.setText("Fishing Log");
         jButton10.setBorder(null);
         jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton10.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -207,7 +207,7 @@ public class MainAppPanel extends javax.swing.JPanel {
         });
 
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("image-Photoroom (1).png")));
-        jButton11.setText("Rate food experience");
+        jButton11.setText("Rate Food");
         jButton11.setBorder(null);
         jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton11.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -218,7 +218,7 @@ public class MainAppPanel extends javax.swing.JPanel {
         });
 
         jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/salmon-plate-cartoon-illustration_1220412-671 (1)-Photoroom.png")));
-        jButton12.setText("Order food");
+        jButton12.setText("Order Food");
         jButton12.setBorder(null);
         jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton12.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
