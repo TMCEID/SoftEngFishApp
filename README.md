@@ -82,7 +82,6 @@ Detailed app functionalities and use-case flows are available in our Project Des
 
 - Performed **unit testing** and **manual testing** for key features.
 - Identified and fixed bugs through structured testing scenarios.
-- Collected user feedback (from peers or demo sessions) to improve usability.
 
 ---
 
@@ -95,7 +94,16 @@ Detailed app functionalities and use-case flows are available in our Project Des
   - Diagrams (robustness, sequence, use cases, class diagram etc.)
 
 ---
+
 ## 🎱 How To Run App
 TBA
+
 ---
 
+## 🏹 Tools used 
+- Diagrams : draw.io , lucid
+- Coding : Netbeans , SQL , Intellij IDEA
+- Reports : MS Word 2016, ilovepdf.com
+- Bibliography : [E-class](https://eclass.upatras.gr/modules/document/?course=CEID1030)
+
+---
