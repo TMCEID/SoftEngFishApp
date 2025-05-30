@@ -98,7 +98,10 @@ Detailed app functionalities and use-case flows are available in our Project Des
 ---
 
 ## 🎱 How To Run App
-TBA
+- Download our code
+- Check the [HowToRun.mp4](https://github.com/TMCEID/SoftEngFishApp/blob/main/HowToRun.mp4) to set things up on IntelliJ IDEA
+- Navigate to /src/AppStarter.java and click run
+- Enjoy <3
 
 ---
 
