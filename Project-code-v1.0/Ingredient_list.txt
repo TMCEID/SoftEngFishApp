@@ -1,0 +1,13 @@
+Tzipoura 0
+Lavraki 20
+Sargos 10
+Fagri 10
+Octopus 25
+Mussels 10
+Shrimp 0
+Squid 11
+Sea_Bass 10
+Red_Mullet 60
+tomato 0
+potato 60
+onions 25

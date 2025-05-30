@@ -1,0 +1,83 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.1.1 Chrome/132.0.6834.210 Electron/34.3.3 Safari/537.36" version="26.1.1">
+  <diagram name="Page-1" id="BcKY94l1VrMe6dfcgMZX">
+    <mxGraphModel dx="1562" dy="909" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="g6jTGhwPRrUgmoX076IL-1" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="820" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-2" value="LoginScreen" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="830" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.002;entryY=0.503;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="g6jTGhwPRrUgmoX076IL-1" target="g6jTGhwPRrUgmoX076IL-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.018;entryY=0.618;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="g6jTGhwPRrUgmoX076IL-2" target="g6jTGhwPRrUgmoX076IL-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="488" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-5" value="Enter Username Controller" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="820" width="70" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-6" value="Enter Password Controller" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="1050" width="70" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.001;entryY=0.668;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.556;exitY=0.996;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="g6jTGhwPRrUgmoX076IL-2" target="g6jTGhwPRrUgmoX076IL-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#e51400;strokeColor=#B20000;" edge="1" parent="1" source="g6jTGhwPRrUgmoX076IL-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="995" y="1240.0000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-9" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="g6jTGhwPRrUgmoX076IL-8">
+          <mxGeometry x="-0.5443" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-10" value="Do credentials match ?" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" vertex="1" parent="1">
+          <mxGeometry x="960" y="910" width="70" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.465;entryY=0.162;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="g6jTGhwPRrUgmoX076IL-5" target="g6jTGhwPRrUgmoX076IL-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="g6jTGhwPRrUgmoX076IL-6" target="g6jTGhwPRrUgmoX076IL-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-13" value="LoginScreen" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="910" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.493;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="g6jTGhwPRrUgmoX076IL-10" target="g6jTGhwPRrUgmoX076IL-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-15" value="Redirect" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" vertex="1" connectable="0" parent="g6jTGhwPRrUgmoX076IL-14">
+          <mxGeometry x="-0.1566" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-16" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="920" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-17" value="Show" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1240" width="70" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-18" value="Error Message &quot;Wrong Credentials&quot;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1420" width="70" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#e51400;strokeColor=#B20000;" edge="1" parent="1" source="g6jTGhwPRrUgmoX076IL-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="995" y="1420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-20" value="Await User interaction with UI" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="1410" width="70" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g6jTGhwPRrUgmoX076IL-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.006;entryY=0.622;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#e51400;strokeColor=#B20000;" edge="1" parent="1" source="g6jTGhwPRrUgmoX076IL-18" target="g6jTGhwPRrUgmoX076IL-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
